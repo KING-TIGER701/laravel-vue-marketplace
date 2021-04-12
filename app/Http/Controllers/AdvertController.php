@@ -30,15 +30,15 @@ class AdvertController extends Controller
             'contact_number' => 'required',
             'contact_email' => 'required',
             'price' => 'required',
-            'category_id' => 'required',
+            'selected_category_id' => 'required',
+            'image' => 'required'
         ]);
 
         if ($request->hasFile('image')) {
             $request->image->store('images', 'public');
         }
 
-        try {
-            Advert::create([
+        Advert::create([
                 'title' => $request->title,
                 'slug' => Str::slug($request->title),
                 'description' => $request->description,
@@ -50,10 +50,6 @@ class AdvertController extends Controller
                 'category_id' => $request->selected_category_id,
                 'image_path' => $request->image->hashName()
             ]);
-        } catch (\Exeption $exception) {
-
-        }
-
     }
 
     /**

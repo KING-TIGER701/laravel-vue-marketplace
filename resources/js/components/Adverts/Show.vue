@@ -22,8 +22,8 @@
                     <p>{{ advert.description }}</p>
                 </div>
                 <div class="px-6 pt-4 pb-2">
+                    <h2 class="text-gray-900 title-font text-lg font-medium mb-2">Category</h2>
                     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ advert.category.name }}</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Posted 3 days ago</span>
                 </div>
                 <div class="px-6 pt-4 pb-2">
                     <h2 class="text-gray-900 title-font text-lg font-medium mb-2">Contact Information</h2>

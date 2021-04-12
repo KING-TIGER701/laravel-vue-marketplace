@@ -36,17 +36,17 @@
                             <div class="px-4 py-5 bg-white sm:p-6">
                                 <label for="category" class="block mb-2 font-medium text-sm text-gray-700">Category</label>
                                 <select
-                                    class="border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+                                    class="border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 w-full bg-white hover:border-gray-400 focus:outline-none appearance-none"
                                     id="category_id"
                                     name="category_id"
                                     v-model="selected_category_id"
                                 >
                                     <option selected disabled value="">Please select category</option>
                                     <option v-for="category in categories" :value="category.id">{{ category.name }}</option>
-                                    <span class="text-red-600" v-if="errors.selected_category_id">
+                                </select>
+                                <span class="text-red-600" v-if="errors.selected_category_id">
                                     {{ errors.selected_category_id[0] }}
                                     </span>
-                                </select>
                             </div>
                             <div class="px-4 py-5 bg-white sm:p-6">
                                 <label for="designer" class="block mb-2 font-medium text-sm text-gray-700">Province</label>
@@ -114,6 +114,9 @@
                             <div class="px-4 py-5 bg-white sm:p-6 mb-4">
                                 <label for="image" class="block mb-2 font-medium text-sm text-gray-700">Ad Image</label>
                                 <input type="file" name="image" @change="onFileSelected" class="mb-6" accept="image/*" required>
+                                <span class="text-red-600" v-if="errors.image">
+                                    {{ errors.image[0] }}
+                                </span>
                             </div>
                             <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
                                 <button @click.prevent="saveForm"

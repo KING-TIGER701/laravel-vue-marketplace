@@ -22,7 +22,7 @@ class CreateAdvertsTable extends Migration
             $table->text('city');
             $table->text('contact_number');
             $table->text('contact_email');
-            $table->string('price');
+            $table->integer('price');
             $table->string('category_id');
             $table->string('image_path');
             $table->timestamps();
