@@ -22,6 +22,17 @@ class AdvertController extends Controller
      */
     public function storeAdverts(Request $request)
     {
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'province' => 'required',
+            'city' => 'required',
+            'contact_number' => 'required',
+            'contact_email' => 'required',
+            'price' => 'required',
+            'category_id' => 'required',
+        ]);
+
         if ($request->hasFile('image')) {
             $request->image->store('images', 'public');
         }

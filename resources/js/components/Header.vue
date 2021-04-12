@@ -7,7 +7,7 @@
                 </router-link>
             </div>
         </div>
-        <div class="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
+        <div class="menu w-full lg:block  lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
             <div class="flex">
                 <router-link
                     :to="{name: 'adverts.create'}"

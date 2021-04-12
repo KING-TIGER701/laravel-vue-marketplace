@@ -3,7 +3,7 @@
         <Header></Header>
         <div class="flex items-center justify-between flex-wrap bg-white py-4 shadow w-full bg-red-700">
             <div class="container px-5 mx-auto">
-                <h2 v-if="adverts.length" class="text-2xl text-white mb-2">{{adverts.length}} items for sale, Search Now.. </h2>
+                <h2 v-if="adverts.length" class="text-2xl text-white mb-2">{{adverts.length}} items for Sale.</h2>
                 <div class="mt-5 md:mt-0 md:col-span-2 mt-2">
                     <form action="" method="post">
                         <div class="shadow overflow-hidden sm:rounded-md">
@@ -21,22 +21,12 @@
 
                                     </div>
                                     <div class="col-span-6 sm:col-span-6 lg:col-span-2">
-                                        <select id="area" name="country" autocomplete="country"
-                                                class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md  focus:border-indigo-500 sm:text-sm"
-                                                v-model="form.selected_area"
-                                        >
-                                            <option selected disabled value="">Search by area</option>
-                                            <option v-for="category in categories" :value="category.id">{{ category.name }}</option>
-                                        </select>
-
-                                    </div>
-                                    <div>
                                         <input placeholder="Search by title..."
                                                class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md  focus:border-indigo-500 sm:text-sm"
                                                v-model="form.title"
                                         >
                                     </div>
-                                    <div>
+                                    <div class="col-span-6 sm:col-span-6 lg:col-span-2">
                                         <button
                                             type="submit"
                                             @click.prevent="search"
@@ -53,7 +43,7 @@
             </div>
         </div>
         <section class="text-gray-700 body-font">
-            <div class="container px-5 py-24 mx-auto">
+            <div class="container px-5 py-12 mx-auto">
                 <div class="flex flex-wrap -m-4">
                     <div
                         class="lg:w-1/4 md:w-1/2 p-4 w-full mb-4"
@@ -76,8 +66,8 @@
                     </div>
                 </div>
             </div>
-            <div v-show="adverts.length === 0" class="items center text-center text-4xl mt-8">
-                <h2>Opps!... Your Search <span class="font-bold">{{ form.title}}</span> did not match any records</h2>
+            <div v-show="adverts.length === 0" class="items center text-center md:text-4xl sm:text-xl">
+                <h2>Opps!... Your Search <span class="font-bold">{{ form.title}}</span> did not match any records. Please clear inputs and search again</h2>
             </div>
         </section>
     </div>
