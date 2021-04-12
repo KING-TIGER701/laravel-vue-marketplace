@@ -46,3 +46,9 @@ this will fill the database with dummy data for testing
 
 ## Uploading Ads 
 - Click on `Post Free Ad` button, first time you will be redirected to login page, after you are logged in you can now post an add
+
+
+## Extra Features
+- Auth Login with Laravel Sanctum
+- Ability to upload images
+- Tailwind Purge Css
