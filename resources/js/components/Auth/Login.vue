@@ -18,6 +18,7 @@
                     {{ errors.password[0]}}
                 </span>
                 </div>
+                <p class="p-2 text-gray-600">Not a member yet? <span class="underline text-indigo-500"><a href="/register">Register for free</a></span></p>
                 <div class="p-2 w-full mt-4">
                     <button @click.prevent="loginUser" type="submit" class="flex text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Login</button>
                 </div>

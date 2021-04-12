@@ -16,7 +16,7 @@ This feature allow user to search for ads by category e.g furniture or by title 
 
 ## Local Installation
 1. Clone this repo  
-`git clone https://github.com/DesmondThema/laravel-vue-marketplace.git`
+`git clone https://github.com/KING-TIGER701/laravel-vue-marketplace.git`
 2. cd into project  
 `cd laravel-vue-ecommerce`
 3. Install composer  
